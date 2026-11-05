@@ -171,6 +171,39 @@ test.describe('con File System Access', () => {
   });
 });
 
+test('dimensione del font: il campo si svuota e accetta qualsiasi valore', async ({ page }) => {
+  await installFilePicker(page, NAME);
+  await page.goto('/');
+  await putFile(page, NAME, 'tests/.tmp/sample.pdf');
+  await page.reload();
+  await openFromPicker(page);
+  await selectTool(page, 't');
+  const field = page.getByTestId('font-size');
+  await field.click();
+  await field.press('Control+a');
+  await field.press('Backspace');
+  await expect(field).toHaveValue('');
+  await page.keyboard.type('8');
+  await expect(field).toHaveValue('8');
+  await field.press('Backspace');
+  await page.keyboard.type('24');
+  await expect(field).toHaveValue('24');
+
+  const t = await pagePoint(page, 0, 0.2, 0.4);
+  await page.mouse.click(t.x, t.y);
+  await expect(page.locator('[data-text-editor]')).toBeFocused();
+  await page.keyboard.type('Grande');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('[data-kind="text"] text')).toHaveCSS('font-size', '24px');
+
+  // Con il campo svuotato e abbandonato torna l'ultima dimensione valida.
+  await field.click();
+  await field.press('Control+a');
+  await field.press('Backspace');
+  await field.blur();
+  await expect(field).toHaveValue('24');
+});
+
 test('senza File System Access: input file e download', async ({ page }) => {
   await page.addInitScript(() => {
     delete (window as any).showOpenFilePicker;

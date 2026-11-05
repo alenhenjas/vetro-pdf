@@ -165,7 +165,7 @@ The full walkthrough, including data flow and design decisions, is in [docs/ARCH
 
 ## Testing
 
-The suite contains 21 end-to-end Playwright tests that run against the production build in real Chrome. The main scenario opens a PDF, adds text, ink, shapes and a pasted image, then saves, reopens, edits and saves again. It verifies that objects are still editable, nothing is duplicated, the file size is stable, and the output is valid and readable with pdf.js.
+The suite contains 22 end-to-end Playwright tests that run against the production build in real Chrome. The main scenario opens a PDF, adds text, ink, shapes and a pasted image, then saves, reopens, edits and saves again. It verifies that objects are still editable, nothing is duplicated, the file size is stable, and the output is valid and readable with pdf.js.
 
 Other tests cover rotated and cropped pages, the widened margin, draft recovery, restoring the original, external file changes, a 320-page document, offline use after the first visit, and the fallback for browsers without the File System Access API.
 

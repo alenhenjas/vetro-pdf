@@ -1,7 +1,7 @@
 import {
   AlignCenter, AlignLeft, AlignRight, Bold, BringToFront, ChevronDown, Copy, Italic, RotateCw, SendToBack, Trash2, Underline,
 } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { deleteSelection, duplicateSelection } from '../actions/editActions';
 import { FONTS } from '../model/fonts';
 import { ensureFont, layoutText } from '../model/textLayout';
@@ -66,19 +66,40 @@ function BackgroundPicker({ style, onChange }: { style: TextStyle; onChange: (p:
   );
 }
 
+const MIN_FONT_SIZE = 1;
+const MAX_FONT_SIZE = 400;
+
+/**
+ * Tiene il testo digitato separato dal valore applicato: durante la scrittura il campo può
+ * restare vuoto o contenere un numero parziale, e solo le dimensioni valide vengono applicate.
+ */
+function FontSizeField({ value, onChange }: { value: number; onChange: (size: number) => void }) {
+  const [draft, setDraft] = useState<string | null>(null);
+  return (
+    <label className="number-field">
+      <span className="sr-only">Dimensione</span>
+      <input
+        type="number" min={MIN_FONT_SIZE} max={MAX_FONT_SIZE} data-testid="font-size"
+        value={draft ?? value}
+        onFocus={(e) => e.target.select()}
+        onChange={(e) => {
+          setDraft(e.target.value);
+          const size = Number(e.target.value);
+          if (size >= MIN_FONT_SIZE && size <= MAX_FONT_SIZE) onChange(size);
+        }}
+        onBlur={() => setDraft(null)}
+      />
+      <span>pt</span>
+    </label>
+  );
+}
+
 function TextControls({ style, onChange }: { style: TextStyle; onChange: (p: Partial<TextStyle>) => void }) {
   return (
     <>
       <div className="panel-row">
         <FontPicker value={style.font} onChange={(font) => onChange({ font })} />
-        <label className="number-field">
-          <span className="sr-only">Dimensione</span>
-          <input
-            type="number" min={6} max={144} value={style.size} data-testid="font-size"
-            onChange={(e) => { const v = Number(e.target.value); if (v >= 1) onChange({ size: v }); }}
-          />
-          <span>pt</span>
-        </label>
+        <FontSizeField value={style.size} onChange={(size) => onChange({ size })} />
         <span className="divider-v" />
         <IconButton icon={Bold} label="Grassetto" active={style.bold} tipSide="top" onClick={() => onChange({ bold: !style.bold })} />
         <IconButton icon={Italic} label="Corsivo" active={style.italic} tipSide="top" onClick={() => onChange({ italic: !style.italic })} />

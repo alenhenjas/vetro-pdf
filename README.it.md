@@ -88,7 +88,7 @@ npm run dev
 
 ## Test
 
-La suite contiene 21 test end-to-end Playwright eseguiti sulla build di produzione in Chrome. Lo scenario principale apre un PDF, aggiunge testo, tratti, forme e un'immagine incollata, salva, riapre, modifica e salva di nuovo. Verifica che gli oggetti restino modificabili, che nulla si duplichi e che il file sia valido e leggibile da pdf.js.
+La suite contiene 22 test end-to-end Playwright eseguiti sulla build di produzione in Chrome. Lo scenario principale apre un PDF, aggiunge testo, tratti, forme e un'immagine incollata, salva, riapre, modifica e salva di nuovo. Verifica che gli oggetti restino modificabili, che nulla si duplichi e che il file sia valido e leggibile da pdf.js.
 
 ## Limiti noti
 

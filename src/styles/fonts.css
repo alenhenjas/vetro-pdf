@@ -1,0 +1,27 @@
+@font-face { font-family: 'Inter'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/inter-400.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/inter-400i.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/inter-700.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/inter-700i.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/roboto-400.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/roboto-400i.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/roboto-700.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/roboto-700i.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/lora-400.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/lora-400i.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/lora-700.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/lora-700i.ttf') format('truetype'); }
+@font-face { font-family: 'Merriweather'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/merriweather-400.ttf') format('truetype'); }
+@font-face { font-family: 'Merriweather'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/merriweather-400i.ttf') format('truetype'); }
+@font-face { font-family: 'Merriweather'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/merriweather-700.ttf') format('truetype'); }
+@font-face { font-family: 'Merriweather'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/merriweather-700i.ttf') format('truetype'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/jetbrains-mono-400.ttf') format('truetype'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/jetbrains-mono-400i.ttf') format('truetype'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/jetbrains-mono-700.ttf') format('truetype'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/jetbrains-mono-700i.ttf') format('truetype'); }
+@font-face { font-family: 'Caveat'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/caveat-400.ttf') format('truetype'); }
+@font-face { font-family: 'Caveat'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/caveat-700.ttf') format('truetype'); }
+@font-face { font-family: 'Patrick Hand'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/patrick-hand-400.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 400; font-style: normal; font-display: swap; src: url('/fonts/nunito-400.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 400; font-style: italic; font-display: swap; src: url('/fonts/nunito-400i.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 700; font-style: normal; font-display: swap; src: url('/fonts/nunito-700.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 700; font-style: italic; font-display: swap; src: url('/fonts/nunito-700i.ttf') format('truetype'); }

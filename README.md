@@ -10,6 +10,7 @@ A local-first desktop PWA that writes directly to the original file. Saved docum
 
 [Live demo](https://alenhenjas.github.io/vetro-pdf/) · [Architecture](docs/ARCHITECTURE.md) · [PDF format](docs/PDF-FORMAT.md) · [Italiano](README.it.md)
 
+[![CI](https://github.com/alenhenjas/vetro-pdf/actions/workflows/ci.yml/badge.svg)](https://github.com/alenhenjas/vetro-pdf/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-20232A?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
